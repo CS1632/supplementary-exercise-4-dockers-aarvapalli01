@@ -55,7 +55,7 @@ public class D3Test {
       String attribute = element.getAttribute("href");
       vars.put("hrefValue", attribute);
     }
-    assertEquals("http://localhost:8080reset", vars.get("hrefValue").toString());
+    assertEquals("http://localhost:8080/reset", vars.get("hrefValue").toString());
   }
   @Test
   public void tEST3CATALOG() {
@@ -67,7 +67,7 @@ public class D3Test {
       String attribute = element.getAttribute("src");
       vars.put("img_src", attribute);
     }
-    assertEquals("http://localhost:8080images/cat2.jpg", vars.get("img_src").toString());
+    assertEquals("http://localhost:8080/images/cat2.jpg", vars.get("img_src").toString());
   }
   @Test
   public void tEST4LISTING() {
@@ -177,7 +177,7 @@ public class D3Test {
   }
   @Test
   public void tEST11GREETACATWITHNAME() {
-    driver.get("http://localhost:8080greet-a-cat/Jennyanydots");
+    driver.get("http://localhost:8080/greet-a-cat/Jennyanydots");
     js.executeScript("document.cookie = \"1=false\";document.cookie = \"2=false\";document.cookie = \"3=false\";");
     {
       List<WebElement> elements = driver.findElements(By.xpath("//*[contains(.,\'Meow! from Jennyanydots.\')]"));
