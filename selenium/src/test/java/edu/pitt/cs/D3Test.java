@@ -49,6 +49,12 @@ public class D3Test {
   public void tearDown() {
     driver.quit();
   }
+  
+  @Test
+  public void testConnection() {
+    // Test that the webserver is ready to service an HTTP request
+    driver.get("http://localhost:8080/");
+  }
   @Test
   public void tEST1LINKS() {
     driver.get("http://localhost:8080");
